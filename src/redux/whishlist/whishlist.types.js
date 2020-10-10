@@ -1,0 +1,4 @@
+export const wishlistTypes = {
+  ADD_ITEM_WISHLIST: "ADD_ITEM_WISHLIST",
+  REMOVE_ITEM_WISHLIST: "REMOVE_ITEM_WISHLIST",
+};
