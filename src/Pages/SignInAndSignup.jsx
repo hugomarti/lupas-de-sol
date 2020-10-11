@@ -9,7 +9,7 @@ const SignInAndSignup = () => {
     <ResponsiveContext.Consumer>
       {(size) => (
         <Box
-          pad={size === "small" ? { top: "large" } : { top: "12vh" }}
+          pad={size === "small" ? { top: "7vh" } : { top: "12vh" }}
           height={{ min: "87vh" }}
           direction="column"
           width="900px"
@@ -17,7 +17,7 @@ const SignInAndSignup = () => {
         >
           <Text
             style={{ textDecoration: "underline" }}
-            margin={{ top: "4rem", bottom: "4rem" }}
+            margin={{ vertical: "2rem" }}
             color="dark-1"
             size="xxlarge"
             textAlign="center"

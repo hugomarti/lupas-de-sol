@@ -13,7 +13,7 @@ const CollectionsPage = () => {
   return (
     <ResponsiveContext.Consumer>
       {(size) => (
-        <Box pad={size === "small" ? { top: "large" } : { top: "12vh" }}>
+        <Box pad={size === "small" ? { top: "7vh" } : { top: "12vh" }}>
           {transformedCollections.map((collection) => (
             <CollectionPreview key={collection.id} data={collection} />
           ))}

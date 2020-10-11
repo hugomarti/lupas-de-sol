@@ -30,7 +30,7 @@ const Media = () => (
 const FooterApp = () => (
   <ResponsiveContext.Consumer>
     {(size) => (
-      <Footer background="dark-1" pad="2rem" margin={{ top: "2rem" }}>
+      <Footer background="dark-1" pad="1rem" margin={{ top: "2rem" }}>
         <Box
           direction={size === "small" ? "column" : "row"}
           justify="between"

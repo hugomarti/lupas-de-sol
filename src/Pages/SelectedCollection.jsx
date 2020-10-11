@@ -15,7 +15,7 @@ const SelectedCollectionPage = () => {
     <ResponsiveContext.Consumer>
       {(size) => (
         <Box
-          pad={size === "small" ? { top: "large" } : { top: "12vh" }}
+          pad={size === "small" ? { top: "7vh" } : { top: "12vh" }}
           height={{ min: "89vh" }}
         >
           <CollectionPreview data={matchCollections} />

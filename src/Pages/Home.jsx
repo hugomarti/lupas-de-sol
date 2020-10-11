@@ -13,8 +13,8 @@ const HomePage = () => {
   return (
     <Box pad={{ top: "5vh" }}>
       <HeroVideo />
-      <Branding />
       <CollectionSelect />
+      <Branding />
       <CollectionPreview data={summer} />
     </Box>
   );

@@ -9,12 +9,11 @@ const CollectionSelectContent = ({ data }) => {
       width="100%"
       height="100%"
       hoverIndicator={{ color: "rgba(0,0,0,0)" }}
-      onClick={() => {}}
       align="center"
       justify="center"
     >
       <Box alignSelf="start" margin="2.5rem">
-        <Heading color="white" level={3} size="large">
+        <Heading color="white" level={4} size="large">
           {title}
         </Heading>
         {description && <Paragraph color="white">{description}</Paragraph>}

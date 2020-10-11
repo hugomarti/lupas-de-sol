@@ -5,15 +5,18 @@ import { useHistory } from "react-router-dom";
 const ContentBox = () => {
   const history = useHistory();
   return (
-    <Box align="start">
-      <Heading level={1} margin="0">
+    <Box align="start" pad={{ vertical: "medium", horizontal: "small" }}>
+      <Heading level={2} margin="0">
         Sunglasses Online Store
       </Heading>
-      <Text size="large" color="white" margin={{ vertical: "1.5rem" }}>
+      <Text
+        size="small"
+        color="white"
+        margin={{ top: "small", bottom: "medium" }}
+      >
         With love from Spain.
       </Text>
       <Button
-        size="medium"
         label="Shop Now"
         primary
         color="brand"

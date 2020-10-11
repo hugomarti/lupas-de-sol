@@ -15,12 +15,13 @@ const CheckoutPage = () => {
         <Box
           margin={{ horizontal: "auto" }}
           width="80vw"
-          height={size === "small" ? { min: "84vh" } : { min: "87vh" }}
-          pad={size === "small" ? { top: "large" } : { top: "12vh" }}
+          height={size === "small" ? { min: "75vh" } : { min: "87vh" }}
+          pad={size === "small" ? { top: "7vh" } : { top: "12vh" }}
+          justify="start"
         >
           <Text
             style={{ textDecoration: "underline" }}
-            margin={{ top: "4rem", bottom: "4rem" }}
+            margin={{ vertical: "2rem" }}
             color="dark-1"
             size="xxlarge"
             textAlign="center"
@@ -33,7 +34,15 @@ const CheckoutPage = () => {
             <WebTable items={items} />
           )}
 
-          <Box width="100%" align="end" pad={{ top: "2rem", right: "2.5rem" }}>
+          <Box
+            width="100%"
+            align={size === "small" ? "center" : "end"}
+            pad={
+              size === "small"
+                ? { top: "2rem", right: "" }
+                : { top: "2rem", right: "2.5rem" }
+            }
+          >
             <Heading level={2}>Total: ${handleCartTotal(items)}</Heading>
           </Box>
         </Box>

@@ -22,7 +22,7 @@ const HeaderWeb = ({ onItemsCount }) => {
       elevation="medium"
       height={{ min: "5vh" }}
     >
-      <Header pad="medium">
+      <Header>
         <Box
           direction="row"
           width="85vw"

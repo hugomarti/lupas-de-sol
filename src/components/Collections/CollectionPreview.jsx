@@ -8,7 +8,7 @@ const CollectionPreview = ({ data }) => {
     <Box width="80vw" margin={{ horizontal: "auto", bottom: "3rem" }}>
       <Text
         style={{ textDecoration: "underline" }}
-        margin={{ top: "4rem", bottom: "2rem" }}
+        margin={{ vertical: "2rem" }}
         color="dark-1"
         size="xxlarge"
         textAlign="center"

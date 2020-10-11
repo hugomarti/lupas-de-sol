@@ -5,7 +5,7 @@ const BrandingText = ({ children }) => (
   <React.Fragment>
     <Heading>Lupas De Sol</Heading>
     {children}
-    <Paragraph textAlign="center" margin={{ vertical: "2rem" }}>
+    <Paragraph size="small" textAlign="center" margin={{ vertical: "2rem" }}>
       TRUE crafts naturally comfortable glasses that transcends the links. Using
       only the finest materials, our sunglasses protect you from the sun and
       match your daily outfit. As a collective we aim to inspire each other to

@@ -15,7 +15,7 @@ const HeaderMobile = ({ onItemsCount }) => {
       margin="auto"
       width="100%"
       elevation="medium"
-      height={{ min: "5vh" }}
+      height={{ min: "10vh" }}
     >
       <Header pad="medium" width="90%" margin="auto">
         <Box direction="column" width="100%" justify="center" align="center">
