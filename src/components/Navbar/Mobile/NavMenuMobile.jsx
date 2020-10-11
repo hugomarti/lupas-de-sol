@@ -23,7 +23,7 @@ const NavMenuMobile = () => {
         {
           label: (
             <Box pad="small" onClick={() => history.push("/shop")}>
-              Collections
+              All Collections
             </Box>
           ),
         },
@@ -38,6 +38,27 @@ const NavMenuMobile = () => {
           label: (
             <Box pad="small" onClick={() => history.push("/shop/man")}>
               Man
+            </Box>
+          ),
+        },
+        {
+          label: (
+            <Box pad="small" onClick={() => history.push("/shop/bestSellers")}>
+              Best Sellers
+            </Box>
+          ),
+        },
+        {
+          label: (
+            <Box pad="small" onClick={() => history.push("/shop/summer")}>
+              Summer
+            </Box>
+          ),
+        },
+        {
+          label: (
+            <Box pad="small" onClick={() => history.push("/shop/preOrder")}>
+              Pre Order
             </Box>
           ),
         },
