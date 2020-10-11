@@ -6,7 +6,7 @@ const MobileTable = ({ items }) => {
   return (
     <Box>
       {items.map((item) => (
-        <MobileTableItem item={item} />
+        <MobileTableItem key={item.id} item={item} />
       ))}
     </Box>
   );

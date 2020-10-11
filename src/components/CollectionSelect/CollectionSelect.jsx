@@ -30,7 +30,7 @@ const CollectionSelect = () => {
               ]}
             >
               {collections.map((item) => (
-                <ColSelectGridItem data={item} />
+                <ColSelectGridItem key={item.id} data={item} />
               ))}
             </Grid>
           )
