@@ -2,9 +2,11 @@ import React from "react";
 import { Box, Menu } from "grommet";
 import { Menu as MenuIcon } from "grommet-icons";
 import { useHistory } from "react-router-dom";
+import SignInToSignUp from "./SignInToSignUp";
 
 const NavMenuMobile = () => {
   const history = useHistory();
+
   return (
     <Menu
       a11yTitle="Navigation Menu"
@@ -45,6 +47,9 @@ const NavMenuMobile = () => {
               Checkout
             </Box>
           ),
+        },
+        {
+          label: <SignInToSignUp />,
         },
       ]}
     />

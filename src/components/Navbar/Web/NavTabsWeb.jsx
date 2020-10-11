@@ -1,24 +1,71 @@
 import React from "react";
-import { Box, Tabs, Tab } from "grommet";
+import { Box, Menu, Text } from "grommet";
 import { useHistory } from "react-router-dom";
-import { navbarLinks } from "../../../data/navbar-links";
+import { auth } from "../../../firebase/firebase.utils";
+import { useSelector } from "react-redux";
 
 const NavTabsWeb = () => {
   const history = useHistory();
+  const currentUser = useSelector((state) => state.user.currentUser);
+
   return (
     <Box
       direction="row"
-      width="50vw"
-      margin="auto"
+      margin={{ right: "2rem" }}
       justify="between"
       align="center"
       pad={{ vertical: "1rem" }}
     >
-      {navbarLinks.map((link) => (
-        <Tabs key={link.id} onClick={() => history.push(`${link.routeName}`)}>
-          <Tab title={link.title} />
-        </Tabs>
-      ))}
+      <Menu
+        label="Collections"
+        items={[
+          {
+            label: "Woman",
+            onClick: () => {
+              history.push("/shop/woman");
+            },
+          },
+          {
+            label: "Man",
+            onClick: () => {
+              history.push("/shop/man");
+            },
+          },
+          {
+            label: "Best Sellers",
+            onClick: () => {
+              history.push("/shop/bestSellers");
+            },
+          },
+          {
+            label: "Summer",
+            onClick: () => {
+              history.push("/shop/summer");
+            },
+          },
+          {
+            label: "Pre Order",
+            onClick: () => {
+              history.push("/shop/preOrder");
+            },
+          },
+        ]}
+      />
+      <Box
+        onClick={() => history.push("/checkout")}
+        margin={{ horizontal: "1rem" }}
+      >
+        <Text>Checkout</Text>
+      </Box>
+      {currentUser ? (
+        <Box onClick={() => auth.signOut()} margin={{ left: "1rem" }}>
+          <Text>Sign Out</Text>
+        </Box>
+      ) : (
+        <Box onClick={() => history.push("/signin")} margin={{ left: "1rem" }}>
+          <Text>Sign In</Text>
+        </Box>
+      )}
     </Box>
   );
 };

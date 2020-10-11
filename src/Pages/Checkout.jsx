@@ -15,8 +15,8 @@ const CheckoutPage = () => {
         <Box
           margin={{ horizontal: "auto" }}
           width="80vw"
-          height={{ min: "89vh" }}
-          pad={{ top: "12vh" }}
+          height={size === "small" ? { min: "84vh" } : { min: "87vh" }}
+          pad={size === "small" ? { top: "large" } : { top: "12vh" }}
         >
           <Text
             style={{ textDecoration: "underline" }}

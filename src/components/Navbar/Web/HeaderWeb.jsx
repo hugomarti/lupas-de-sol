@@ -30,12 +30,14 @@ const HeaderWeb = ({ onItemsCount }) => {
           justify="between"
           align="center"
         >
-          <Logo
-            onClick={() => history.push("/")}
-            style={{ cursor: "pointer" }}
-          />
-          <NavTabsWeb />
-          <Box direction="row">
+          <Box width="30%">
+            <Logo
+              onClick={() => history.push("/")}
+              style={{ cursor: "pointer" }}
+            />
+          </Box>
+          <Box direction="row" align="center" width="60%" justify="end">
+            <NavTabsWeb />
             <CartIcon
               onHidden={() => dispatch(toggleCartHidden())}
               onItemsCount={onItemsCount}

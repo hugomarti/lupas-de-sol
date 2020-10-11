@@ -12,7 +12,7 @@ const HeroVideo = () => {
         autoPlay
         muted
         preLoad
-        style={{ zIndex: "-6" }}
+        style={{ zIndex: "-1" }}
       >
         <source
           key="video"
@@ -22,7 +22,7 @@ const HeroVideo = () => {
       <Box
         style={{
           position: "absolute",
-          zIndex: 1,
+          zIndex: -1,
           left: "0rem",
           bottom: "0rem",
         }}

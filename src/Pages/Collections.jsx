@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "grommet";
+import { Box, ResponsiveContext } from "grommet";
 import { useSelector } from "react-redux";
 import CollectionPreview from "../components/Collections/CollectionPreview";
 
@@ -11,11 +11,15 @@ const CollectionsPage = () => {
   );
 
   return (
-    <Box pad={{ top: "12vh" }}>
-      {transformedCollections.map((collection) => (
-        <CollectionPreview key={collection.id} data={collection} />
-      ))}
-    </Box>
+    <ResponsiveContext.Consumer>
+      {(size) => (
+        <Box pad={size === "small" ? { top: "large" } : { top: "12vh" }}>
+          {transformedCollections.map((collection) => (
+            <CollectionPreview key={collection.id} data={collection} />
+          ))}
+        </Box>
+      )}
+    </ResponsiveContext.Consumer>
   );
 };
 

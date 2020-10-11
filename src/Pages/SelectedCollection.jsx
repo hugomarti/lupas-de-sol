@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "grommet";
+import { Box, ResponsiveContext } from "grommet";
 import { useRouteMatch } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -12,9 +12,16 @@ const SelectedCollectionPage = () => {
   const matchCollections = collections[match.params.categoryId];
 
   return (
-    <Box pad={{ top: "12vh" }} height={{ min: "89vh" }}>
-      <CollectionPreview data={matchCollections} />
-    </Box>
+    <ResponsiveContext.Consumer>
+      {(size) => (
+        <Box
+          pad={size === "small" ? { top: "large" } : { top: "12vh" }}
+          height={{ min: "89vh" }}
+        >
+          <CollectionPreview data={matchCollections} />
+        </Box>
+      )}
+    </ResponsiveContext.Consumer>
   );
 };
 

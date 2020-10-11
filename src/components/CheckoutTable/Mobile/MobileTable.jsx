@@ -5,9 +5,11 @@ import MobileTableItem from "./MobileTableItem";
 const MobileTable = ({ items }) => {
   return (
     <Box>
-      {items.map((item) => (
-        <MobileTableItem key={item.id} item={item} />
-      ))}
+      {items.length === 0 ? (
+        <Box>Your cart is empty.</Box>
+      ) : (
+        items.map((item) => <MobileTableItem key={item.id} item={item} />)
+      )}
     </Box>
   );
 };

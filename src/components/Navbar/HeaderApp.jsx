@@ -17,7 +17,7 @@ const HeaderApp = () => {
   };
 
   return (
-    <Box style={{ zIndex: 200 }}>
+    <Box>
       <ResponsiveContext.Consumer>
         {(size) =>
           size === "small" ? (
