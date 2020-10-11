@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Table, TableBody, Text } from "grommet";
-import TableHeaderWeb from "./TableHeaderWeb";
+import TableHeaderWeb from "./TableHeader";
 import CheckoutBodyWeb from "./CheckoutBodyWeb";
 
 const WebTable = ({ items }) => {

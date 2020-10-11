@@ -17,47 +17,47 @@ const CheckoutBodyWeb = ({ data }) => {
     return quantity * price;
   };
   return (
-    <React.Fragment>
-      <TableRow>
-        <TableCell>
-          <Box direction="row" align="center">
-            <Box height="5rem" width="5rem">
-              <Image fit="cover" src={image} />
-            </Box>
+    <TableRow>
+      <TableCell>
+        <Box direction="row" align="center">
+          <Box height="5rem" width="5rem">
+            <Image fit="cover" src={image} />
+          </Box>
+          <Box>
             <Text margin={{ left: "1.5rem" }}>{title}</Text>
           </Box>
-        </TableCell>
-        <TableCell align="center" justify="center">
-          <Text>${price}</Text>
-        </TableCell>
-        <TableCell>
-          <Box direction="row" align="center" justify="center">
-            <Box
-              style={{ cursor: "pointer" }}
-              onClick={() => dispatch(removeItem(data))}
-            >
-              &#10094;
-            </Box>
-            <Text margin={{ horizontal: "0.5rem" }}>{quantity}</Text>
-            <Box
-              style={{ cursor: "pointer" }}
-              onClick={() => dispatch(addItemToCart(data))}
-            >
-              &#10095;
-            </Box>
-          </Box>
-        </TableCell>
-        <TableCell align="center" justify="center">
-          <Text>${handleItemTotal()}</Text>
-        </TableCell>
-        <TableCell align="center" justify="center">
-          <Trash
-            onClick={() => dispatch(clearItemFromCart(data))}
+        </Box>
+      </TableCell>
+      <TableCell align="center" justify="center">
+        <Text>${price}</Text>
+      </TableCell>
+      <TableCell>
+        <Box direction="row" align="center" justify="center">
+          <Box
             style={{ cursor: "pointer" }}
-          />
-        </TableCell>
-      </TableRow>
-    </React.Fragment>
+            onClick={() => dispatch(removeItem(data))}
+          >
+            &#10094;
+          </Box>
+          <Text margin={{ horizontal: "0.5rem" }}>{quantity}</Text>
+          <Box
+            style={{ cursor: "pointer" }}
+            onClick={() => dispatch(addItemToCart(data))}
+          >
+            &#10095;
+          </Box>
+        </Box>
+      </TableCell>
+      <TableCell align="center" justify="center">
+        <Text>${handleItemTotal()}</Text>
+      </TableCell>
+      <TableCell align="center" justify="center">
+        <Trash
+          onClick={() => dispatch(clearItemFromCart(data))}
+          style={{ cursor: "pointer" }}
+        />
+      </TableCell>
+    </TableRow>
   );
 };
 

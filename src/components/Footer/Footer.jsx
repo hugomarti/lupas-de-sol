@@ -1,5 +1,5 @@
 import React from "react";
-import { Anchor, Box, Footer, Text } from "grommet";
+import { Anchor, Box, Footer, ResponsiveContext, Text } from "grommet";
 import {
   Grommet as GrommetIcon,
   FacebookOption,
@@ -8,7 +8,7 @@ import {
 } from "grommet-icons";
 
 const Media = () => (
-  <Box direction="row" gap="xxsmall" justify="center">
+  <Box direction="row" gap="xxsmall" justify="center" margin="1rem">
     <Anchor
       a11yTitle="Share feedback on Github"
       href="https://www.instagram.com/"
@@ -28,18 +28,29 @@ const Media = () => (
 );
 
 const FooterApp = () => (
-  <Footer background="dark-1" pad="2rem" margin={{ top: "2rem" }}>
-    <Box align="center" direction="row" gap="xsmall">
-      <GrommetIcon color="white" size="medium" />
-      <Text alignSelf="center" color="white" size="small">
-        Lupas De Sol
-      </Text>
-    </Box>
-    <Media />
-    <Text textAlign="center" size="xsmall">
-      ©Lupas de Sol Copyright
-    </Text>
-  </Footer>
+  <ResponsiveContext.Consumer>
+    {(size) => (
+      <Footer background="dark-1" pad="2rem" margin={{ top: "2rem" }}>
+        <Box
+          direction={size === "small" ? "column" : "row"}
+          justify="between"
+          align="center"
+          width="100%"
+        >
+          <Box align="center" direction="row" gap="xsmall">
+            <GrommetIcon color="white" size="medium" />
+            <Text alignSelf="center" color="white" size="small">
+              Lupas De Sol
+            </Text>
+          </Box>
+          <Media />
+          <Text textAlign="center" size="xsmall">
+            ©Lupas de Sol Copyright
+          </Text>
+        </Box>
+      </Footer>
+    )}
+  </ResponsiveContext.Consumer>
 );
 
 export default FooterApp;

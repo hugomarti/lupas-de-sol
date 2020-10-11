@@ -11,21 +11,22 @@ const Branding = () => (
     pad={{ horizontal: "5rem", vertical: "2rem" }}
   >
     <ResponsiveContext.Consumer>
-      {(size) =>
-        size === "small" ? (
-          <Box direction="column" justify="center" align="center">
-            <BrandingText>
+      {(size) => (
+        <Box
+          direction={size === "small" ? "column" : "row"}
+          justify="center"
+          align="center"
+          height={size === "small" ? "" : "21vh"}
+        >
+          <BrandingText>
+            {size === "small" ? (
               <hr style={{ width: "30vw", margin: "1rem" }} />
-            </BrandingText>
-          </Box>
-        ) : (
-          <Box direction="row" justify="center" align="center">
-            <BrandingText>
+            ) : (
               <hr style={{ height: "10vh", margin: "3rem" }} />
-            </BrandingText>
-          </Box>
-        )
-      }
+            )}
+          </BrandingText>
+        </Box>
+      )}
     </ResponsiveContext.Consumer>
   </Box>
 );

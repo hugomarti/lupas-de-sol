@@ -9,7 +9,7 @@ const CollectionSelectItem = ({ data }) => {
 
   return (
     <Box
-      flex="grow"
+      flex
       basis="medium"
       height={height}
       background={`url(${image})`}
