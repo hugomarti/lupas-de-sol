@@ -47,7 +47,7 @@ const CollectionItem = ({ data }) => {
         style={{ cursor: "pointer" }}
         onClick={() => setModalItem(!modalItem)}
       >
-        <Image height="300px" src={image} />
+        <Image height="260px" src={image} />
       </Box>
       <Box>
         <Box

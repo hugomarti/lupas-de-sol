@@ -19,9 +19,13 @@ const CollectionSelect = () => {
             </Box>
           ) : (
             <Grid
-              rows={["35vh", "50vh"]}
+              rows={["20vh", "37vh"]}
               columns={["fit", "fit", "fit"]}
               gap="small"
+              pad={
+                (size === "large" ? { horizontal: "" } : { horizontal: "1rem" },
+                { vertical: "1rem" })
+              }
               areas={[
                 { name: "guarantee", start: [0, 1], end: [2, 1] },
                 { name: "bestSellers", start: [0, 0], end: [0, 0] },

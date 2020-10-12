@@ -10,11 +10,11 @@ const SignInToSignUp = () => {
   return (
     <React.Fragment>
       {currentUser ? (
-        <Box onClick={() => auth.signOut()}>
+        <Box pad="small" onClick={() => auth.signOut()}>
           <Text>Sign Out</Text>
         </Box>
       ) : (
-        <Box onClick={() => history.push("/signin")}>
+        <Box pad="small" onClick={() => history.push("/signin")}>
           <Text>Sign In</Text>
         </Box>
       )}

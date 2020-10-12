@@ -8,8 +8,8 @@ const HeroVideo = () => {
       {(size) => (
         <Box
           direction={size === "small" ? "column" : "row"}
-          pad={{ top: "5vh" }}
-          height="60vh"
+          pad={size === "small" ? { top: "9vh" } : { top: "5vh" }}
+          height={size === "small" ? "65vh" : "38vh"}
         >
           <Box width={size === "small" ? "100%" : "80vw"}>
             <Video
@@ -38,6 +38,7 @@ const HeroVideo = () => {
             justify="center"
             align="center"
             pad="medium"
+            width="100%"
           >
             <ContentBox />
           </Box>

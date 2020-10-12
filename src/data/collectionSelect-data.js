@@ -5,7 +5,7 @@ export const COLLECTION_SELECT = [
     image: "https://i.ibb.co/dbB7v3s/pexels-alisson-souto-1759622.jpg",
     routeName: "bestSellers",
     gridName: "bestSellers",
-    height: "15rem",
+    height: "35vh",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const COLLECTION_SELECT = [
     image: "https://i.ibb.co/N7Mqf1F/pexels-bia-sousa-2036359.jpg",
     routeName: "woman",
     gridName: "woman",
-    height: "15rem",
+    height: "35vh",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const COLLECTION_SELECT = [
     image: "https://i.ibb.co/6Hvz41c/pexels-derick-santos-2479402.jpg",
     routeName: "man",
     gridName: "man",
-    height: "15rem",
+    height: "35vh",
   },
   {
     id: 4,
@@ -31,6 +31,6 @@ export const COLLECTION_SELECT = [
     image: "https://i.ibb.co/sJk8tZc/pexels-andrea-piacquadio-894077-1.jpg",
     routeName: "",
     gridName: "guarantee",
-    height: "30rem",
+    height: "35vh",
   },
 ];

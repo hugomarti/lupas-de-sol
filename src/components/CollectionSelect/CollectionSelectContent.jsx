@@ -16,7 +16,11 @@ const CollectionSelectContent = ({ data }) => {
         <Heading color="white" level={4} size="large">
           {title}
         </Heading>
-        {description && <Paragraph color="white">{description}</Paragraph>}
+        {description && (
+          <Paragraph size="small" color="white">
+            {description}
+          </Paragraph>
+        )}
       </Box>
     </Box>
   );

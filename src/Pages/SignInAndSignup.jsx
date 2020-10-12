@@ -27,7 +27,7 @@ const SignInAndSignup = () => {
           <Box
             direction={size === "small" ? "column" : "row"}
             justify="between"
-            align="start"
+            align={size === "small" ? "center" : "start"}
           >
             <Signin />
             <Signup />
