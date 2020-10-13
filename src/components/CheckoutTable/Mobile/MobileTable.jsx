@@ -6,7 +6,9 @@ const MobileTable = ({ items }) => {
   return (
     <Box>
       {items.length === 0 ? (
-        <Text textAlign="center">Your cart is empty.</Text>
+        <Box height="30vh" align="center" justify="center">
+          <Text textAlign="center">Your cart is empty.</Text>
+        </Box>
       ) : (
         items.map((item) => <MobileTableItem key={item.id} item={item} />)
       )}

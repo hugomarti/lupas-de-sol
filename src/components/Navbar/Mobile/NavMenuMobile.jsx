@@ -43,21 +43,24 @@ const NavMenuMobile = () => {
         },
         {
           label: (
-            <Box pad="small" onClick={() => history.push("/shop/bestSellers")}>
+            <Box pad="small" onClick={() => history.push("/shop/best-sellers")}>
               Best Sellers
             </Box>
           ),
         },
         {
           label: (
-            <Box pad="small" onClick={() => history.push("/shop/summer")}>
+            <Box
+              pad="small"
+              onClick={() => history.push("/shop/summer-collection")}
+            >
               Summer
             </Box>
           ),
         },
         {
           label: (
-            <Box pad="small" onClick={() => history.push("/shop/preOrder")}>
+            <Box pad="small" onClick={() => history.push("/shop/pre-order")}>
               Pre Order
             </Box>
           ),

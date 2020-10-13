@@ -14,6 +14,7 @@ const WebTable = ({ items }) => {
             margin={{ vertical: "2rem" }}
             justify="center"
             align="center"
+            height="20vh"
           >
             <Text>Your cart is empty.</Text>
           </Box>

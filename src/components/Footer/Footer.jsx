@@ -35,7 +35,8 @@ const FooterApp = () => (
           direction={size === "small" ? "column" : "row"}
           justify="between"
           align="center"
-          width="100%"
+          width="85vw"
+          margin="auto"
         >
           <Box align="center" direction="row" gap="xsmall">
             <GrommetIcon color="white" size="medium" />

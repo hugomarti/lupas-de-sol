@@ -19,7 +19,7 @@ const CollectionSelect = () => {
             </Box>
           ) : (
             <Grid
-              rows={["20vh", "37vh"]}
+              rows={["21vh", "48vh"]}
               columns={["fit", "fit", "fit"]}
               gap="small"
               pad={

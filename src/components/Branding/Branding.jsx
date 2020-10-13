@@ -10,7 +10,7 @@ const Branding = () => (
         width="100%"
         align="center"
         justify="center"
-        pad={{ horizontal: "5rem", vertical: "2rem" }}
+        pad='2rem'
         height={size === "small" ? "60vh" : "40vh"}
       >
         <ResponsiveContext.Consumer>

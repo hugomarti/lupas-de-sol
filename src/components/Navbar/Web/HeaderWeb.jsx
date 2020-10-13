@@ -20,7 +20,8 @@ const HeaderWeb = ({ onItemsCount }) => {
       margin="auto"
       width="100%"
       elevation="medium"
-      height={{ min: "5vh" }}
+      height={{ min: "8vh" }}
+      justify="center"
     >
       <Header>
         <Box

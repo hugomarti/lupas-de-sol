@@ -62,7 +62,7 @@ const CartDrawer = () => {
                   dispatch(toggleCartHidden());
                 }}
                 primary
-                margin={{ bottom: "2rem" }}
+                margin={{ bottom: "5rem" }}
               />
             </Box>
           </Box>

@@ -4,8 +4,13 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import {
+  firestore,
+  convertCollectionsSnapshotToMap,
+} from "./firebase/firebase.utils";
 
 import { setCurrentUser } from "./redux/user/user.action";
+import { updateCollections } from "./redux/shop/shop.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
 import HeaderApp from "./components/Navbar/HeaderApp";
@@ -18,14 +23,14 @@ import SignInAndSignup from "./Pages/SignInAndSignup";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
+  unsubscribeFromSnapshot = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, updateCollections } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
-
         userRef.onSnapshot((snapShot) => {
           setCurrentUser({
             id: snapShot.id,
@@ -36,6 +41,14 @@ class App extends React.Component {
 
       setCurrentUser(userAuth);
     });
+
+    const collectionRef = firestore.collection("collections");
+    this.unsubscribeFromSnapshot = collectionRef.onSnapshot(
+      async (snapShot) => {
+        const collectionsMap = convertCollectionsSnapshotToMap(snapShot);
+        updateCollections(collectionsMap);
+      }
+    );
   }
 
   componentWillUnmount() {
@@ -71,6 +84,8 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+  updateCollections: (collectionsMap) =>
+    dispatch(updateCollections(collectionsMap)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

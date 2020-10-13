@@ -12,7 +12,7 @@ const CollectionSelectContent = ({ data }) => {
       align="center"
       justify="center"
     >
-      <Box alignSelf="start" margin="2.5rem">
+      <Box alignSelf="center" margin="2.5rem">
         <Heading color="white" level={4} size="large">
           {title}
         </Heading>

@@ -8,10 +8,10 @@ const HeroVideo = () => {
       {(size) => (
         <Box
           direction={size === "small" ? "column" : "row"}
-          pad={size === "small" ? { top: "9vh" } : { top: "5vh" }}
-          height={size === "small" ? "65vh" : "38vh"}
+          pad={size === "small" ? { top: "7vh" } : { top: "8vh" }}
+          height={size === "small" ? "65vh" : "76vh"}
         >
-          <Box width={size === "small" ? "100%" : "80vw"}>
+          <Box flex={{ grow: 1, shrink: 1 }}>
             <Video
               fit="cover"
               controls={false}
@@ -28,17 +28,11 @@ const HeroVideo = () => {
             </Video>
           </Box>
           <Box
-            // style={{
-            //   position: "absolute",
-            //   zIndex: -1,
-            //   left: "0rem",
-            //   bottom: "0rem",
-            // }}
             background="dark-1"
             justify="center"
             align="center"
             pad="medium"
-            width="100%"
+            flex={{ grow: 1, shrink: 1 }}
           >
             <ContentBox />
           </Box>

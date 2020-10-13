@@ -6,6 +6,7 @@ import { handleCartTotal } from "../redux/cart/cart.utils";
 
 import WebTable from "../components/CheckoutTable/Web/WebTable";
 import MobileTable from "../components/CheckoutTable/Mobile/MobileTable";
+import StripeCheckoutButton from "../components/StripeButton/StripeButton";
 
 const CheckoutPage = () => {
   const items = useSelector((state) => state.cart.cartItems);
@@ -15,7 +16,7 @@ const CheckoutPage = () => {
         <Box
           margin={{ horizontal: "auto" }}
           width="80vw"
-          height={size === "small" ? { min: "75vh" } : { min: "87vh" }}
+          height={size === "small" ? { min: "70vh" } : { min: "82vh" }}
           pad={size === "small" ? { top: "7vh" } : { top: "12vh" }}
           justify="start"
         >
@@ -36,13 +37,18 @@ const CheckoutPage = () => {
 
           <Box
             width="100%"
-            align={size === "small" ? "center" : "end"}
+            justify={size === "small" ? "center" : "end"}
             pad={
               size === "small"
                 ? { top: "2rem", right: "" }
                 : { top: "2rem", right: "2.5rem" }
             }
+            direction="row"
+            align="center"
           >
+            <Box margin="2rem">
+              <StripeCheckoutButton />
+            </Box>
             <Heading level={2}>Total: ${handleCartTotal(items)}</Heading>
           </Box>
         </Box>

@@ -14,7 +14,7 @@ const NavTabsWeb = () => {
       margin={{ right: "2rem" }}
       justify="between"
       align="center"
-      pad={{ vertical: "1rem" }}
+      pad={{ vertical: "0.5rem" }}
     >
       <Menu
         label="Collections"
@@ -34,19 +34,19 @@ const NavTabsWeb = () => {
           {
             label: "Best Sellers",
             onClick: () => {
-              history.push("/shop/bestSellers");
+              history.push("/shop/best-sellers");
             },
           },
           {
             label: "Summer",
             onClick: () => {
-              history.push("/shop/summer");
+              history.push("/shop/summer-collection");
             },
           },
           {
             label: "Pre Order",
             onClick: () => {
-              history.push("/shop/preOrder");
+              history.push("/shop/pre-order");
             },
           },
         ]}
