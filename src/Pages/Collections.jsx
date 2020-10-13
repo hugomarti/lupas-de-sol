@@ -6,9 +6,9 @@ import CollectionPreview from "../components/Collections/CollectionPreview";
 const CollectionsPage = () => {
   const collections = useSelector((state) => state.shop.collections);
 
-  const transformedCollections = Object.keys(collections).map(
-    (key) => collections[key]
-  );
+  const transformedCollections = collections
+    ? Object.keys(collections).map((key) => collections[key])
+    : [];
 
   return (
     <ResponsiveContext.Consumer>

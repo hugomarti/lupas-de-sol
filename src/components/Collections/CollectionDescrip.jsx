@@ -18,7 +18,12 @@ const CollectionDescrip = ({ toggle, onClose, data }) => {
       {(size) => (
         <React.Fragment>
           {toggle && (
-            <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
+            <Layer
+              position="center"
+              modal
+              onClickOutside={onClose}
+              onEsc={onClose}
+            >
               <Box pad="medium" width="100%">
                 <Box
                   direction={size === "small" ? "column" : "row"}

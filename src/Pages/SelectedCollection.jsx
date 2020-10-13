@@ -9,7 +9,9 @@ const SelectedCollectionPage = () => {
   const match = useRouteMatch();
   const collections = useSelector((state) => state.shop.collections);
 
-  const matchCollections = collections[match.params.categoryId];
+  const matchCollections = collections
+    ? collections[match.params.categoryId]
+    : null;
 
   return (
     <ResponsiveContext.Consumer>

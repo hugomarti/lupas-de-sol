@@ -20,8 +20,16 @@ import FooterApp from "./components/Footer/Footer";
 import CheckoutPage from "./Pages/Checkout";
 import CollectionsPage from "./Pages/Collections";
 import SignInAndSignup from "./Pages/SignInAndSignup";
+import WithSpinner from "./components/WithSpinner/WithSpinner";
+
+const CollectionsPageWithSpinner = WithSpinner(CollectionsPage);
+const SelectedCollectionPageWithSpinner = WithSpinner(SelectedCollectionPage);
 
 class App extends React.Component {
+  state = {
+    loading: true,
+  };
+
   unsubscribeFromAuth = null;
   unsubscribeFromSnapshot = null;
 
@@ -47,6 +55,7 @@ class App extends React.Component {
       async (snapShot) => {
         const collectionsMap = convertCollectionsSnapshotToMap(snapShot);
         updateCollections(collectionsMap);
+        this.setState({ loading: false });
       }
     );
   }
@@ -56,11 +65,16 @@ class App extends React.Component {
   }
 
   render() {
+    const { loading } = this.state;
     return (
       <Box>
         <HeaderApp />
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route
+            exact
+            path="/"
+            component={() => <HomePage isLoading={loading} />}
+          />
           <Route
             exact
             path="/signin"
@@ -69,8 +83,22 @@ class App extends React.Component {
             }
           />
           <Route exact path="/checkout" component={CheckoutPage} />
-          <Route exact path="/shop" component={CollectionsPage} />
-          <Route path="/shop/:categoryId" component={SelectedCollectionPage} />
+          <Route
+            exact
+            path="/shop"
+            render={(props) => (
+              <CollectionsPageWithSpinner isLoading={loading} {...props} />
+            )}
+          />
+          <Route
+            path="/shop/:categoryId"
+            render={(props) => (
+              <SelectedCollectionPageWithSpinner
+                isLoading={loading}
+                {...props}
+              />
+            )}
+          />
         </Switch>
         <FooterApp />
       </Box>

@@ -16,7 +16,7 @@ const CheckoutPage = () => {
         <Box
           margin={{ horizontal: "auto" }}
           width="80vw"
-          height={size === "small" ? { min: "70vh" } : { min: "82vh" }}
+          height={size === "small" ? { min: "70vh" } : { min: "84.5vh" }}
           pad={size === "small" ? { top: "7vh" } : { top: "12vh" }}
           justify="start"
         >
