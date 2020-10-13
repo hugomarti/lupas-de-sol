@@ -50,10 +50,7 @@ const NavMenuMobile = () => {
         },
         {
           label: (
-            <Box
-              pad="small"
-              onClick={() => history.push("/shop/summer-collection")}
-            >
+            <Box pad="small" onClick={() => history.push("/shop/summer")}>
               Summer
             </Box>
           ),

@@ -40,7 +40,7 @@ const NavTabsWeb = () => {
           {
             label: "Summer",
             onClick: () => {
-              history.push("/shop/summer-collection");
+              history.push("/shop/summer");
             },
           },
           {
