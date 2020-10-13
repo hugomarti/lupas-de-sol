@@ -3,7 +3,7 @@ export const COLLECTION_SELECT = [
     id: 1,
     title: "Best Sellers",
     image: "https://i.ibb.co/dbB7v3s/pexels-alisson-souto-1759622.jpg",
-    routeName: "bestSellers",
+    routeName: "best-sellers",
     gridName: "bestSellers",
     height: "35vh",
   },
