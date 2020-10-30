@@ -9,7 +9,7 @@ const HeroVideo = () => {
         <Box
           direction={size === "small" ? "column" : "row"}
           pad={size === "small" ? { top: "7vh" } : { top: "8vh" }}
-          height={size === "small" ? "65vh" : "76vh"}
+          height="50vh"
         >
           <Box flex={{ grow: 1, shrink: 1 }}>
             <Video

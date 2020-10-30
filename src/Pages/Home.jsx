@@ -11,7 +11,7 @@ const HomePage = () => {
     <ResponsiveContext.Consumer>
       {(size) => (
         <Box
-          pad={size === "large" ? { horizontal: "7.5%" } : { horizontal: "" }}
+          pad={size === "large" ? { horizontal: "10%" } : { horizontal: "" }}
         >
           <HeroVideo />
           <CollectionSelect />

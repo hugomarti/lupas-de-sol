@@ -10,7 +10,7 @@ const ColSelectGridItem = ({ data }) => {
   return (
     <Box background={`url(${image})`} gridArea={gridName}>
       <Box
-        background="rgba(0,0,0,0.4)"
+        background="rgba(0,0,0,0.2)"
         width="100%"
         height="100%"
         hoverIndicator={{ color: "rgba(0,0,0,0)" }}
