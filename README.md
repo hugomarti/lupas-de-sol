@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sunglasses eComerce simulation. Products are oganized by genres and collections, all the database and authorization is handled by firebase and stripe for payments. Made with React, Redux, styled with Grommet UI and a previous UI and graphic design made with Figma and Illustrator
 
 ## Available Scripts
 
